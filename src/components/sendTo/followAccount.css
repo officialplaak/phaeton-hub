@@ -1,0 +1,48 @@
+@import '../app/variables.css';
+
+.wrapper {
+  line-height: 36px;
+  display: flex;
+  justify-content: center;
+  background: rgba(112, 114, 141, 0.3);
+  box-shadow: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 28px 38px;
+
+  & h2 {
+    margin-top: 0 !important;
+  }
+
+  & header {
+    & p {
+      line-height: 26px;
+      color: #fff;
+    }
+  }
+
+  & .titleInput {
+    margin: 0 0vh;/* stylelint-disable-line */
+  }
+
+  & .button {
+    font-weight: var(--font-weight-bold);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    text-transform: none;
+    width: 50%;
+    height: 62px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  & .follow {
+    margin-top: 25px;
+    height: 56px;
+
+    & .label {
+      vertical-align: middle;
+    }
+  }
+}

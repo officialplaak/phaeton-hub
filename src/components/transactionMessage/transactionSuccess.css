@@ -1,0 +1,26 @@
+.successTransaction {
+  width: 3px;
+  height: 3px;
+  margin: 1px;
+  border-radius: 100%;
+  display: inline-block;
+  animation: FadeAnimation 1s ease-in .2s forwards;
+  color: #5db985 !important;
+}
+
+.successTransaction span {
+  color: #5db985;
+}
+
+@keyframes FadeAnimation {
+  0% {
+    opacity: 1;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: visible;
+    display: block;
+  }
+}

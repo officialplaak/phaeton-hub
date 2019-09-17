@@ -1,0 +1,16 @@
+.input:first-of-type .label {
+  padding-left: 0;
+  font-size: 16px !important;
+  color: #c5c5c9 !important;
+  top: 0 !important;
+  margin-top: -8px;
+}
+
+.input input:first-of-type {
+  color: #fff !important;
+  font-size: 16px !important;
+}
+
+figure {
+  display: none !important;
+}

@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  transition: transform ease-in-out 500ms;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: #404664;
+  height: 120px !important;
+  width: 120px !important;
+  max-width: 120px !important;
+  border-radius: 6px;
+  border: 2px solid #fff !important;
+}
+
+.accountVisual {
+  border-radius: 100%;
+  overflow: hidden;
+  display: inline-block;
+  width: 80%;
+  height: 80%;
+}

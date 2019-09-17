@@ -1,0 +1,16 @@
+# The following redirect is intended for use with most SPA's that handles routing internally.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# API Redirect
+[[redirects]]
+  from = "/api/*"
+  to = "http://103.15.67.74:8000/:splat"
+  status = 301!
+  force = true
+  [redirects.headers]
+    X-From = "Netlify"
+    X-Api-Key = "c5b30135-c29f-48d4-b1f6-ba06224a891b"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"

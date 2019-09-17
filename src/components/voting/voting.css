@@ -1,0 +1,117 @@
+@import '../app/variables.css';
+
+:root {
+  --submit-button-height: 55px;
+  --filters-height: 55px;
+}
+
+.wrapper,
+.delegates {
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  height: 100%;
+
+  & aside {
+    margin-top: 30px;
+  }
+
+  & input {
+    width: 97%;
+    margin: 0 auto;
+    padding: 11px;
+  }
+
+  & header {
+    padding: 12px 16px;
+  }
+
+  & footer {
+    margin-top: -27px;
+
+    & button {
+      margin-left: 200px;
+    }
+  }
+}
+
+.delegates {
+  background-color: red;
+}
+
+.sideBar {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.votes {
+  flex-basis: 100%;
+  max-width: 100%;
+  box-shadow: none;
+  margin-top: 22px;
+}
+
+@media (--medium-viewport) {
+  .wrapper {
+    margin: 0;
+
+    & > section,
+    & > aside {
+      padding: 0;
+      width: 100%;
+    }
+
+    & > section {
+      height: calc(100vh - var(--submit-button-height) - var(--header-height-m) - var(--footer-height-m)); /* stylelint-disable-line */
+      position: relative;
+    }
+
+    & > aside {
+      position: fixed;
+      z-index: 2;
+      left: 0;
+      bottom: var(--footer-height-m);
+      max-height: 100%;
+      height: auto;
+    }
+  }
+
+  .hasLayover {
+    & :global(.delegate-list-box) {
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    & aside {
+      height: 100%;
+      height: calc(100% - var(--header-height-m) - var(--footer-height-m));
+    }
+  }
+
+  .wrapper:not(.hasLayover) aside > div {
+    background-color: transparent;
+  }
+}
+
+@media (--small-viewport) {
+  .wrapper {
+    & > section {
+      height: calc(100vh - var(--submit-button-height) - var(--header-height-s) - var(--footer-height-s)); /* stylelint-disable-line */
+    }
+
+    & > aside {
+      bottom: var(--footer-height-s);
+    }
+  }
+
+  .hasLayover aside {
+    height: calc(100% - var(--header-height-s) - var(--footer-height-s));
+  }
+}
+
+@media (max-width: 1025px) {
+  .votingBox {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}

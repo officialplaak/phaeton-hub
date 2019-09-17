@@ -1,0 +1,251 @@
+@import './../app/variables.css';
+@import './animations.css';
+@import './layout.css';
+
+:root {
+  --transition: all ease 300ms;
+  --header-focused-font-size: 32px;
+  --login-box-padding-L: var(--box-padding-left-L);
+  --login-box-padding-XL: var(--box-padding-left-XL);
+  --forward-to-link-label-font-size-XL: 15px;
+  --forward-to-link-label-font-size-L: 12px;
+  --forward-to-link-icon-font-size-XL: 24px;
+  --forward-to-link-icon-font-size-L: 16px;
+}
+
+.login {
+  height: auto;
+  float: none;
+  width: 42%;
+  overflow: auto;
+  background: rgba(112, 114, 141, 0.3);
+  margin: 0 auto;
+  border-radius: 6px;
+
+  @mixin login-signup;
+
+  & footer {
+    padding-top: 7vh; /* stylelint-disable-line */
+    display: flex;
+  }
+
+  & .table {
+    position: relative;
+
+    & footer {
+      padding-top: 0;
+      margin-top: 0;
+      justify-content: flex-start;
+
+      & > div {
+        flex-basis: auto;
+        max-width: inherit;
+      }
+
+      & button {
+        min-width: 200px !important;
+        min-height: 56px !important;
+      }
+    }
+  }
+
+  & h2 {
+    color: #fff;
+    margin-top: 30vh; /* stylelint-disable-line */
+    margin-bottom: 20px !important;
+  }
+
+  & form button {
+    display: none;
+    transition: var(--transition);
+    animation: fadeIn 300ms forwards;
+  }
+
+  & header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 50px;
+
+    & .forwardToLink {
+      color: var(--color-primary-standard);
+      text-decoration: initial;
+      font-family: var(--content-font);
+      font-weight: var(--font-weight-bold);
+
+      & .label {
+        vertical-align: middle;
+      }
+
+      & .icon {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  /* @todo remove these with #3 */
+
+  & .outTaken {
+    top: 100px;
+
+    & + .outTaken {
+      top: 150px;
+
+      & + .outTaken {
+        top: 200px;
+      }
+    }
+  }
+
+  &.focused {
+    transform: translateZ(0);
+    padding: 0 40px;
+
+    & form button {
+      display: inherit;
+    }
+
+    & h2 {
+      font-size: var(--header-focused-font-size);
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (--xLarge-viewport) {
+  .login {
+    padding-right: var(--login-box-padding-XL);
+
+    &.focused {
+      width: 100%;
+      padding-bottom: 40px;
+    }
+
+    & header {
+      & .forwardToLink {
+        & .label {
+          font-size: var(--forward-to-link-label-font-size-XL);
+        }
+
+        & .icon {
+          font-size: var(--forward-to-link-icon-font-size-XL);
+        }
+      }
+    }
+
+    & h2 {
+      font-size: 65px;
+    }
+  }
+}
+
+@media (--large-viewport) {
+  .login {
+    padding-right: var(--login-box-padding-L);
+
+    &.focused {
+      width: 96%;
+      padding-bottom: 40px;
+    }
+
+    & header {
+      & .forwardToLink {
+        & .label {
+          font-size: var(--forward-to-link-label-font-size-L);
+        }
+
+        & .icon {
+          font-size: var(--forward-to-link-icon-font-size-L);
+        }
+      }
+    }
+
+    & h2 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (--medium-viewport) {
+  .login {
+    height: calc(100vh - var(--m-top-bar-height) - var(--m-menu-bar-height)); /* stylelint-disable-line */
+    width: 40%;
+
+    & h2 {
+      font-size: var(--font-size-h2-l);
+      margin-top: 28vh; /* stylelint-disable-line */
+    }
+
+    & .focused {
+      & h2 {
+        font-size: var(--font-size-h3-m);
+      }
+    }
+  }
+}
+
+@media (--small-viewport) {
+  .login {
+    height: calc(50vh - var(--s-top-bar-height)); /* stylelint-disable-line */
+    width: 100%;
+    padding: 0 var(--box-padding-left-M);
+
+    & h2 {
+      font-size: var(--font-size-h2-s);
+      margin-top: 12vh; /* stylelint-disable-line */
+    }
+
+    & header {
+      position: relative;
+      left: -5px;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    &.focused {
+      width: 100%;
+      height: auto;
+
+      & h2 {
+        margin-bottom: 10px;
+      }
+
+      & form button {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    & .outTaken {
+      right: 0;
+      top: 0;
+
+      & + .outTaken {
+        top: 50px;
+      }
+
+      & > .outTaken {
+        top: 50px;
+      }
+    }
+
+    & .table {
+      display: block;
+      position: relative;
+
+      & .tableCell {
+        display: block;
+        vertical-align: initial;
+      }
+    }
+  }
+}
+
+@media (--xSmall-viewport) {
+  .login {
+    & h2 {
+      margin-top: 8vh; /* stylelint-disable-line */
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@import '../app/variables.css';
+
+.tab {
+  font-size: 16px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 24px;
+  font-weight: var(--font-weight-normal);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: transparent;
+  background-clip: padding-box;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.tabActive {
+  background: #ed3c24;
+  border-bottom: 2px solid #ed3c24;
+  color: #fff;
+  font-weight: 800;
+  padding: 16px 10px;
+}
+
+.tabInactive {
+  color: var(--color-white);
+  background: transparent;
+  padding: 16px 10px;
+}
+
+@media (--medium-viewport) {
+  .tab {
+    display: none;
+  }
+}

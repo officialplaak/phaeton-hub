@@ -1,0 +1,246 @@
+@import '../app/variables.css';
+
+:root {
+  --menu-background-color: var(--color-white);
+  --menu-item-active-gradient: linear-gradient(-27deg, #cb1e39 4%, #cb1e39 61%, #d73746 100%);
+  --menu-item-active-border-width: 7px;
+  --more-menu-color: var(--color-grayscale-medium);
+  --offcanvas-menu-border-color: var(--color-grayscale-light);
+  --more-menu-border-color: var(--color-grayscale-medium);
+  --read-more-font-size: 17px;
+  --read-more-icon-font-size: 65px;
+  --close-icon-font-size: 35px;
+}
+
+.sideBarWrapper {
+  text-align: center;
+}
+
+.aside {
+  transform: translateX(-100%);
+  opacity: 0.5;
+  transition: all ease 300ms;
+  transition-delay: 200ms;
+}
+
+:global(.appLoaded) .aside {
+  opacity: 1;
+  transform: translateX(0);
+  order: 2;
+  width: 640px;
+}
+
+.logo {
+  margin: 40px 0 44px;
+  height: 50px;
+}
+
+.more {
+  color: var(--more-menu-color);
+  border-top: 1px solid var(--more-menu-border-color);
+  background: var(--menu-background-color);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 20px 0 30px;
+  cursor: pointer;
+}
+
+.navigationContainer {
+  overflow: hidden;
+  margin-left: -2px;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+}
+
+.drawer {
+  width: 480px;
+  background: #fff;
+  max-width: 100%;
+
+  &.left {
+    border-right: none;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-height: 920px) {
+  .drawer.left {
+    display: block;
+    height: 100%;
+  }
+}
+
+.header {
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px 0 60px;
+  background: #fff;
+}
+
+.close {
+  font-size: var(--close-icon-font-size);
+  display: flex;
+  width: auto;
+  cursor: pointer;
+  color: var(--more-menu-color);
+}
+
+@media (--medium-viewport) {
+  .aside {
+    display: none;
+  }
+
+  .header {
+    padding: 0;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .logo {
+    margin: 20px auto;
+    height: 42px;
+  }
+}
+
+.label {
+  padding: 1vh 10px; /* stylelint-disable-line */
+  font-size: var(--main-menu-font-size);
+  color: var(--color-black);
+  font-weight: bold;
+  font-family: var(--heading-font);
+  display: flex;
+  flex: 0 0 auto;
+  text-align: center;
+  flex-grow: 1;
+  text-transform: capitalize;
+  border-right: 0 none;
+  border-bottom: 0 none;
+  border-top: 0 none;
+  margin-right: 15px;
+
+  &:nth-child(2n) {
+    border-right: none !important;
+  }
+
+  &:nth-child(1) {
+    border-top: 0 none;
+  }
+
+  &:nth-child(2) {
+    border-top: 0 nones;
+  }
+
+  & > div {
+    width: 100%;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  & span {
+    display: block;
+    margin: 10px 0 0;
+    color: #8e97a1;
+  }
+
+  & img {
+    width: 32px;
+  }
+
+  & > .rippleWrapper {
+    display: none;
+  }
+}
+
+.navigationContainer .navigation {
+  padding-left: 0;
+  box-shadow: none;
+  margin-left: 2px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.tabs nav {
+  overflow: hidden;
+}
+
+.pointer {
+  display: none;
+}
+
+.arrowContainer {
+  display: none;
+}
+
+.label.active {
+  position: relative;
+  color: var(--color-black);
+  opacity: 1;
+
+  &::before {
+    position: absolute;
+    width: var(--menu-item-active-border-width);
+    height: 100%;
+    top: 0;
+    right: 0;
+    content: '';
+    display: block;
+    opacity: 0.8;
+    background-image: none;
+  }
+
+  & span {
+    color: #db4350;
+  }
+
+  & img {
+    -webkit-filter: invert(40%) grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg) saturate(400%) contrast(2);
+    filter: grayscale(100%) brightness(100%) sepia(100%) hue-rotate(-50deg) saturate(600%) contrast(0.8);
+    width: 32px;
+  }
+}
+
+.readMoreText {
+  font-size: var(--read-more-font-size);
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: 'gilroy', 'Open Sans', sans-serif;
+}
+
+.readMoreIcon {
+  font-size: var(--read-more-icon-font-size);
+  width: 100%;
+}
+
+@media (--medium-viewport) {
+  .sideBarWrapper {
+    display: none;
+  }
+}
+
+@media (--xSmall-viewport) {
+  .sideBarWrapper {
+    display: none;
+  }
+
+  .label {
+    padding: 25px 10px;
+  }
+
+  .label.active::before {
+    top: auto;
+    width: 100%;
+    bottom: 0;
+    height: 5px;
+  }
+}

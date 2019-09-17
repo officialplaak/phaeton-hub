@@ -1,0 +1,156 @@
+@import '../app/variables.css';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  & div[data-react-toolbox="input"]:nth-child(2) {
+    & input {
+      &:focus ~ label {
+        top: 0 !important;
+      }
+    }
+  }
+
+  & footer {
+    & > section {
+      display: block !important;
+      margin: 0;
+
+      & > div {
+        width: 65%;
+        max-width: 65%;
+        flex-basis: 65%;
+        margin: 0 auto 12px;
+
+        & button {
+          display: block;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+
+  & header {
+    padding: 20px 0px;
+
+    & .mobileTitle {
+      display: none;
+    }
+
+    & .desktopTitle {
+      display: block;
+    }
+
+    & .subTitle {
+      font-size: var(--subtitle-font-size);
+    }
+
+    & h2 {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    & h3 {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  & .body {
+    text-align: center;
+    margin: 2vh 0px; /* stylelint-disable-line */
+  }
+
+  & .emailLink {
+    text-decoration: none;
+    color: var(--color-primary-standard);
+    font-weight: var(--font-weight-bold);
+    font-size: 14px;
+  }
+
+  & .copy {
+    color: var(--color-grayscale-medium);
+    display: block;
+    margin-bottom: 15px;
+    margin-left: -5px;
+    font-size: 14px;
+    font-weight: var(--font-weight-bold);
+  }
+
+  & .qrCode {
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding: 40px;
+
+    &.magnified {
+      & canvas {
+        max-width: 180px;
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+
+    &.minimized {
+      & canvas {
+        width: 250px !important;
+        height: auto !important;
+      }
+    }
+  }
+
+  & .backButton {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+.paddingLeft {
+  padding-left: 10px;
+}
+
+.accountVisual {
+  position: absolute;
+  left: -39px;
+  top: 8px;
+}
+
+.disabledInput input:disabled {
+  opacity: 1;
+  border: none;
+}
+
+@media (--small-viewport) {
+  .wrapper {
+    & .subTitle {
+      display: none;
+    }
+
+    & .copy {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (--medium-viewport) {
+  .wrapper {
+    & header {
+      & h2 {
+        line-height: initial;
+        margin: 0;
+      }
+
+      & .mobileTitle {
+        display: block;
+      }
+
+      & .desktopTitle {
+        display: none;
+      }
+    }
+  }
+}

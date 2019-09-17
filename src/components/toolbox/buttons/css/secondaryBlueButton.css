@@ -1,0 +1,18 @@
+@import './base.css';
+
+.button {
+  min-height: 34px !important;
+  padding: 10px 20px;
+  min-width: inherit !important;
+  height: inherit !important;
+  border-radius: 5px;
+  width: 260px !important;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 auto;
+
+  @mixin buttonBasics;
+  @mixin buttonSecondary--blue;
+}
+

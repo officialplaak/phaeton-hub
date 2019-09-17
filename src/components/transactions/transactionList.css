@@ -1,0 +1,54 @@
+@import '../app/variables.css';
+
+.empty {
+  text-align: center;
+  font-weight: var(--font-weight-semi-bold);
+  padding-top: 25px;
+  color: var(--color-grayscale-dark);
+}
+
+.results {
+  height: auto;
+  background: transparent;
+  margin: 0;
+  padding: 0px;
+
+  & .turnArrow {
+    transform: rotate(180deg);
+  }
+}
+
+@media (--xLarge-viewport) {
+  .results {
+    overflow-y: auto;
+    margin: 0px;
+
+    & > div:first-child {
+      background-color: transparent !important;
+      margin-bottom: 0;
+
+      & > div {
+        color: #8e97a1 !important;
+        font-size: 14px !important;
+        transition: all 0.2s ease;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+@media (--large-viewport) {
+  .results {
+    overflow: hidden;
+    position: relative;
+  }
+}
+
+@media (--medium-viewport) {
+  .results {
+    overflow-y: initial;
+    padding-bottom: 100px;
+    margin: 0px calc(0 - var(--box-padding-left-M));
+  }
+}

@@ -1,0 +1,37 @@
+@import '../app/variables.css';
+
+:root {
+  --title-bar-extra-padding-M: 58px;
+  --title-bar-extra-padding-S: 52px;
+}
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 8px;
+
+  & .sendTo {
+    width: 100%;
+    order: 2;
+    margin: 20px auto;
+    height: 100%;
+  }
+}
+
+@media (--medium-viewport) {
+  .wrapper {
+    padding-top: var(--title-bar-extra-padding-M);
+  }
+}
+
+@media (--small-viewport) {
+  .wrapper {
+    padding-top: var(--title-bar-extra-padding-S);
+  }
+}
+
+@media (max-width: 1025px) {
+  .transactions {
+    width: 100%;
+  }
+}

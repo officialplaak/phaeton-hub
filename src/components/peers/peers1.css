@@ -1,0 +1,505 @@
+.transactionTophead {
+
+  & .outer {
+    padding: 0 15px;
+  }
+
+  & .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .transAnalysis {
+    padding-left: 6px;
+  }
+
+  & .transDate {padding-right: 10px;}
+
+  & .navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  }
+
+  & .navigationRight {
+    float: right;
+  }
+
+  & .navigationRight a {
+    color: #fff
+
+  }
+
+
+ & .scroll_link {
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+  vertical-align: middle;
+
+  & ul {
+    display: none;
+    position: absolute;
+    left: -110px;
+    width: 280px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+
+
+    & li {
+      background-color: #1f202d;
+      border-left: 2px solid #383849;
+      border-right: 2px solid #383849;
+    }
+
+    & li:first-child {
+      border-top: 2px solid #383849;
+    }
+
+    & li:last-child {
+      & a {
+        border-bottom: 2px solid #383849;
+      }
+    }
+
+    & a {
+      display: block !important;
+      font-size: 15px !important;
+      text-align: center;
+      letter-spacing: 1px;
+      position: relative;
+      border-bottom: 1px solid #383849;
+      padding: 18px 30px;
+
+      &:hover {
+        background: #ed3c24 !important;
+      }
+    }
+  }
+
+  &:hover {
+    & ul {
+      display: block;
+    }
+  }
+}
+
+  & .innerWrap {
+    background: #323340;
+    width: 100%;
+    margin-top: 30px;
+
+    & h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+
+    & h2::before {
+      display: none;
+    }
+
+    & .dateText {
+      text-align: center;
+      color: #fff;
+      margin: 0;
+    }
+
+    & .rows {
+      padding:30px 0;
+      justify-content: center;
+
+      & .mapWrap {
+        text-align: center;
+
+         & .mapText {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 600;
+        }
+      }
+
+      & .mapContainer {
+        background: #2d2e37;
+        width: 370px;
+        margin: 0 auto;
+        padding: 10px;
+        min-height: 288px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 288px;
+      }
+    }
+  }
+
+  & .bgMap {
+    padding-bottom: 30px;
+
+    & .outer {
+      padding: 0 15px;
+    }
+
+    & .mapInner {
+      background: #2d2e37;
+      width: 95%;
+      margin: 0 auto;
+      border-radius: 5px;
+      padding: 30px;
+    }
+  }
+
+  & .tableWrap {
+
+    & .tablehead {
+
+      & .flexWrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+
+        & .th {
+          color: #fff;
+          padding-left: 10px;
+          text-align: center;
+          width: 100%;
+          font-weight: 600;
+        }
+      }
+    }
+
+    & .tableListWrap {
+
+      & .dataList {
+        background: #24242f;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 5px;
+        margin-bottom: 30px;
+
+        & .td {
+          color: #fff;
+          width: 100%;
+          padding-left: 10px;
+          text-align: center;
+          padding: 20px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+
+      & .view {
+        color: #e03007;
+      }
+    }
+  }
+}
+
+.masternodesContainer {
+  padding: 0 17.813px;
+
+  & .innerWrapBox {
+    background-color: #323340;
+    border-radius: 6px;
+    padding: 28px 38px;
+    margin-top: 0;
+    height: auto;
+  }
+
+  & .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .boxOne {
+    background-color: #2d2e37;
+    padding: 10px;
+    margin-right: 10px;
+    min-height: 300px;
+  }
+ 
+  & .graphChart {
+    background-color: #2d2e37;
+    margin-top: 30px;
+    min-height: 400px;
+  }
+
+  & .rangeBar {
+    background-color: #2d2e37;
+    margin-top: 30px;
+    min-height: 60px;
+  }
+
+  & .nodePlaak {
+    color: #fff;
+    font-weight: 600 !important;
+    font-size: 23px;
+    text-align: center;
+  }
+
+  & .nodeDate {
+    color: #fff;
+    line-height: 0px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 400 !important;
+  }
+
+  & .totalTitle {
+     color: #fff;
+     text-align: center;
+     font-size: 20px;
+     font-weight: 600 !important;
+  }
+
+}
+
+.transactionTable {
+       margin-top: 30px;
+
+    & .transactionList {
+      height: auto;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 81%;
+      justify-content: center;
+    }
+
+    & .transactionList > p {
+      color: #8e97a1 !important;
+      font-size: 14px !important;
+      transition: all .2s ease;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+
+   & .transactionlistRow {
+      white-space: nowrap;
+      width: 96%;
+      background: #24242f !important;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      margin-right: 0;
+      margin-left: 0;
+      height: auto;
+      padding: 12px 26px;
+      line-height: 43px;
+   }
+
+   & .transactionlistData {
+       display: inline-block;
+       text-align: center;
+       width: 20.2%;
+   }
+
+      & .transaData {
+        color: #c5c5c9;
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      & .transaData a {
+        color: #e03007;
+      }
+}
+
+ .transactionfeesTable {
+       margin-top: 30px;
+
+    & .transactionList {
+      height: auto;
+      background: transparent;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+    }
+
+    & .transactionList > p {
+      color: #8e97a1 !important;
+      font-size: 14px !important;
+      transition: all .2s ease;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+
+   & .transactionlistRow {
+      white-space: nowrap;
+      width: 96%;
+      background: #24242f !important;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      margin-right: 0;
+      margin-left: 0;
+      height: auto;
+      padding: 12px 26px;
+      line-height: 43px;
+   }
+
+   & .transactionlistData {
+       display: inline-block;
+       text-align: center;
+       width: 20.2%;
+   }
+
+      & .transaData {
+        color: #c5c5c9;
+        font-size: 16px;
+        font-weight: 400;
+      }
+}
+
+.mainBanner {
+  
+  & .row {
+    align-items: center;
+    display: flex;
+  }
+
+  & h1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600 !important;
+  }
+
+  & .subTxt {
+    font-size: 17px;
+    line-height: 26px;
+    color: #fff;
+    font-family: 'PT Sans';
+    width: 83%;
+  }
+
+  & .boldTxt {
+    font-size: 24px;
+    font-weight: 600 !important;
+    color: #fff;
+  }
+
+  & .bannerTxt {
+    
+  }
+}
+
+.masterNode {
+  & .txtContainer {
+    font-size: 15px;
+    color: #b63333;
+    text-align: center;
+  }
+
+  & h3 {
+    color: #fff;
+  }
+
+  & p {
+    color: #fff;
+  }
+
+  & .img-container {
+    padding-top: 55px;
+
+    & img {
+      width: 70%;
+    }
+  }
+}
+
+
+.transactionFilter {
+
+   & .outer {
+    padding: 0 37.813px;
+  }
+
+  & .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & .navigation ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 14px;
+  }
+
+  & .scroll_link {
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+  vertical-align: middle;
+
+  & ul {
+    display: none;
+    position: absolute;
+    left: -110px;
+    width: 280px;
+    padding-top: 15px;
+    padding-left: 0;
+    padding-right: 0;
+    list-style: none;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+
+
+    & li {
+      background-color: #1f202d;
+      border-left: 2px solid #383849;
+      border-right: 2px solid #383849;
+    }
+
+    & li:first-child {
+      border-top: 2px solid #383849;
+    }
+
+    & li:last-child {
+      & a {
+        border-bottom: 2px solid #383849;
+      }
+    }
+
+    & a {
+      display: block !important;
+      font-size: 15px !important;
+      text-align: center;
+      letter-spacing: 1px;
+      position: relative;
+      border-bottom: 1px solid #383849;
+      padding: 18px 30px;
+
+      &:hover {
+        background: #ed3c24 !important;
+      }
+    }
+  }
+
+  &:hover {
+    & ul {
+      display: block;
+    }
+  }
+}
+
+}

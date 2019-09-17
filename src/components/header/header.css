@@ -1,0 +1,343 @@
+@import '../toolbox/buttons/css/base.css';
+@import '../app/variables.css';
+
+:root {
+  --header-margin-right-left-M: 20px;
+  --header-margin-top-bottom-M: 23px;
+  --header-margin-right-left-S: 20px;
+  --header-margin-top-bottom-S: 10px;
+  --avatar-height: 69px;
+  --avatar-height-s: 33px;
+  --menu-icon-height-XL: 39px;
+  --menu-icon-height-M: 34px;
+  --font-size-normal: 16px;
+  --font-size-small: 12px;
+}
+
+.wrapper {
+  text-align: right;
+  padding-top: 59px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 2px 2px 12px -5px #000;
+  background: rgba(112, 114, 141, 0.3);
+
+  & .noPadding {
+    padding: 0px;
+  }
+
+  & .searchBar {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    order: 1;
+    margin-top: 0;
+    width: 25%;
+    text-align: left;
+    padding: 0 15px;
+  }
+}
+
+.unlocked {
+  color: var(--color-error);
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: var(--font-size-small);
+  line-height: 1.5em; /* stylelint-disable-line */
+}
+
+.logoWrapper {
+  width: 25%;
+}
+
+.logo {
+  display: none;
+}
+
+.logoutButton {
+  padding: 8px;
+  margin: 6px 8px;
+  height: auto;
+  float: right;
+}
+
+.lock {
+  font-size: 19px;
+  height: auto;
+  vertical-align: top;
+  line-height: 24px !important;
+  margin-left: 5px;
+}
+
+.primary {
+  line-height: 40px;
+
+  @mixin buttonBasics;
+  @mixin buttonPrimary;
+}
+
+.secondaryBlue {
+  line-height: 39px;
+
+  @mixin buttonBasics;
+  @mixin buttonSecondary--blue;
+}
+
+.material-icons {
+  font-size: 24px !important;
+}
+
+.login {
+  text-align: right;
+  text-decoration: none;
+
+  & .button {
+    display: block;
+  }
+
+  & .link {
+    display: none;
+    font-size: 15px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary-standard);
+  }
+}
+
+.loginInfo {
+  display: inline-block;
+  vertical-align: middle;
+  order: 3;
+  padding-right: 8px;
+  width: 25%;
+}
+
+.rightSide {
+  display: inline-block;
+  width: 32vw; /* stylelint-disable-line */
+}
+
+.account {
+  position: relative;
+  height: 80px;
+  top: 15px;
+  left: -10px;
+
+  & .avatar {
+    display: inline-block;
+    vertical-align: middle;
+    height: var(--avatar-height);
+    width: var(--avatar-height);
+    transition: transform ease-in-out 500ms;
+    margin-right: 20px;
+  }
+
+  & .information {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 25px;
+    height: var(--avatar-height);
+    font-family: 'Open Sans';
+    font-weight: 600;
+
+    & .balance {
+      font-size: 19px;
+      font-family: var(--heading-font);
+      color: #ed3c24;
+      line-height: 0.5em; /* stylelint-disable-line */
+      padding-top: 7px;
+
+      & small {
+        padding-left: 5px;
+        font-size: var(--font-size-small);
+      }
+    }
+
+    & .address {
+      font-size: 14px;
+      color: #8e97a1;
+    }
+
+    & .copy {
+      font-size: 24px;
+      padding-right: 5px;
+    }
+
+    & .timer {
+      font-size: 16px;
+      color: var(--color-grayscale-medium);
+      line-height: 1.5em; /* stylelint-disable-line */
+      overflow: hidden;
+    }
+  }
+
+  & .menu {
+    cursor: pointer;
+
+    & .item {
+      padding: 0;
+    }
+
+    & .link {
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+      line-height: 25px;
+      color: #fff;
+      padding: 0;
+      text-align: center;
+    }
+
+    & .iconCircle {
+      margin: 0;
+      position: absolute;
+      top: 0px;
+      right: 0;
+      background: #ed3c24;
+      height: 30px;
+      width: 20px;
+      padding: 10px 0;
+      text-align: center;
+
+      & .button {
+        padding: 2px;
+      }
+    }
+  }
+}
+
+@media (--medium-viewport) {
+  .loginInfo {
+    width: 100%;
+    float: none;
+  }
+
+  .wrapper {
+    margin: 0px;
+    box-shadow: 0 2px 4px 0 rgba(60, 80, 104, 0.14), 0 8px 10px 0 rgba(60, 80, 104, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: var(--color-white);
+    z-index: var(--headerbar-index);
+    height: auto;
+
+    & .searchBar {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  .logo {
+    display: inline-block;
+    height: 50px;
+    padding: 20px;
+  }
+
+  .logoutButton {
+    display: none;
+  }
+
+  .account {
+    margin: 13px 13px 0;
+    height: 72px;
+
+    & .avatar {
+      margin-right: 0;
+    }
+
+    & .information {
+      & .balance {
+        font-size: 20px;
+        color: var(--color-black);
+        font-family: var(--heading-font);
+
+        & small {
+          font-size: 12px;
+        }
+      }
+
+      & .address {
+        font-size: 12px;
+        font-weight: 400;
+      }
+    }
+
+    & .menu {
+      & .iconCircle {
+        display: none;
+      }
+    }
+  }
+
+  .login {
+    & .button {
+      display: none;
+    }
+
+    & .link {
+      display: block;
+      vertical-align: middle;
+      margin: var(--header-margin-top-bottom-M) var(--header-margin-right-left-M) var(--header-margin-top-bottom-M) 0px;
+      line-height: 54px;
+    }
+  }
+}
+
+@media (--small-viewport) {
+  .wrapper {
+    height: auto;
+  }
+
+  .account {
+    margin: var(--header-margin-top-bottom-S) var(--header-margin-right-left-S) 0px 0px;
+    height: auto;
+
+    & .avatar {
+      margin-top: 4px;
+      height: var(--avatar-height-s);
+      width: var(--avatar-height-s);
+    }
+
+    & .information {
+      margin-top: 0;
+      height: var(--avatar-height-s);
+      line-height: 20px;
+
+      & .balance {
+        font-size: 18px;
+        font-weight: 300;
+
+        & small {
+          font-size: 10px;
+        }
+      }
+
+      & .timer {
+        display: none;
+      }
+    }
+  }
+
+  .logo {
+    height: 40px;
+    padding: 10px 10px 7px 20px;
+  }
+
+  .login {
+    & .link {
+      margin: var(--header-margin-top-bottom-S) var(--header-margin-right-left-S) var(--header-margin-top-bottom-S) 0px;
+      line-height: 46px;
+    }
+  }
+}
+
+@media (--xSmall-viewport) {
+  .logo {
+    padding: 10px 0 7px;
+  }
+}

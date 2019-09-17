@@ -1,0 +1,119 @@
+@import '../app/variables.css';
+
+:root {
+  --tab-inactive-color: var(--color-grayscale-dark);
+  --grid-padding-left: 30px;
+  --header-line-height: 36px;
+  --header-subtitle-font-size: var(--subtitle-font-size);
+  --font-weight-bold: 500;
+  --fee-color: var(--color-grayscale-dark);
+}
+
+.form {
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 20px;
+
+  & input {
+    border-radius: 0;
+  }
+
+  & > div {
+    padding: 10px 0;
+  }
+}
+
+.fee {
+  text-align: right;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  top: 70px;
+  color: var(--fee-color);
+}
+
+input:read-only {
+  border-bottom: solid 1px var(--color-white) !important;
+}
+
+.button {
+  min-width: 0;
+  width: 100%;
+}
+
+.accountVisual {
+  position: absolute;
+  left: -40px;
+  top: -15px;
+}
+
+.headerWrapper {
+  padding: 20px 0px;
+  line-height: var(--header-line-height);
+  padding-left: 0 !important;
+  color: #8e97a1;
+  font-weight: 400;
+
+  & .title {
+    float: left;
+  }
+
+  & .subTitle {
+    font-size: var(--header-subtitle-font-size);
+  }
+
+  & .account {
+    float: right;
+  }
+
+  & h2 {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 0;
+    margin-top: 0px;
+  }
+
+  & h3 {
+    display: inline-block;
+    margin: 0;
+  }
+
+  & .balanceUnit {
+    font-weight: var(--font-weight-bold);
+  }
+
+  & .address {
+    text-align: right;
+    cursor: pointer;
+  }
+
+  & .transfer {
+    color: var(--color-grayscale-dark);
+  }
+}
+
+.sendWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.error {
+  display: block;
+  padding-right: 85px;
+}
+
+@media (--small-viewport) {
+  .headerWrapper {
+    display: none;
+  }
+}
+
+@media (--xSmall-viewport) {
+  .nextButton {
+    width: 100%;
+  }
+}

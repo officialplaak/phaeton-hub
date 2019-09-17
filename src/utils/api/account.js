@@ -1,0 +1,34 @@
+// import { requestToActivePeer } from './peers';
+import Phaeton from 'phaeton-validator';
+
+export const getAccount = (activePeer, address) =>
+  new Promise((resolve, reject) => {
+    activePeer.accounts.get({ address }).then((res) => {
+      if (res.data.length > 0) {
+        resolve({
+          ...res.data[0],
+          serverPublicKey: res.data[0].publicKey,
+        });
+      } else {
+        // when the account has no transactions yet (therefore is not saved on the blockchain)
+        // this endpoint returns { success: false }
+        resolve({
+          address,
+          balance: 0,
+        });
+      }
+    }).catch(reject);
+  });
+
+// export const setSecondPassphrase = (activePeer, secondSecret, publicKey, secret) =>
+//   requestToActivePeer(activePeer, 'signatures', { secondSecret, publicKey, secret });
+
+export const setSecondPassphrase = (activePeer, secondPassphrase, publicKey, passphrase) =>
+  new Promise((resolve, reject) => {
+    const transaction = Phaeton.transaction
+      .registerSecondPassphrase({ passphrase, secondPassphrase });
+    activePeer.transactions.broadcast(transaction).then(() => {
+      resolve(transaction);
+    }).catch(reject);
+  });
+

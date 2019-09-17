@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="69.84px" height="80.879px" viewBox="0 0 69.84 80.879" enable-background="new 0 0 69.84 80.879" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<defs>
+				<polygon id="SVGID_1_" points="34.527,0.112 69.055,20.065 69.055,59.967 34.527,79.92 0,59.967 0,20.065 				"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  overflow="visible"/>
+			</clipPath>
+		</g>
+		<g>
+			<defs>
+				<polygon id="SVGID_3_" points="34.527,0.112 69.055,20.065 69.055,59.967 34.527,79.92 0,59.967 0,20.065 				"/>
+			</defs>
+			<defs>
+				<rect id="SVGID_4_" width="69.84" height="80.879"/>
+			</defs>
+			<clipPath id="SVGID_5_">
+				<use xlink:href="#SVGID_3_"  overflow="visible"/>
+			</clipPath>
+			<clipPath id="SVGID_6_" clip-path="url(#SVGID_5_)">
+				<use xlink:href="#SVGID_4_"  overflow="visible"/>
+			</clipPath>
+			<g clip-path="url(#SVGID_6_)">
+				<g>
+					<defs>
+						<rect id="SVGID_7_" width="69.12" height="80.161"/>
+					</defs>
+					<clipPath id="SVGID_8_">
+						<use xlink:href="#SVGID_7_"  overflow="visible"/>
+					</clipPath>
+					<g clip-path="url(#SVGID_8_)">
+						
+							<image overflow="visible" enable-background="new    " width="150" height="173" xlink:href="EB151B01.jpeg"  transform="matrix(0.4736 0 0 -0.4717 -0.749 80.8037)">
+						</image>
+					</g>
+				</g>
+			</g>
+			<g clip-path="url(#SVGID_6_)">
+				<g>
+					<defs>
+						<rect id="SVGID_9_" y="0.112" width="69.84" height="80"/>
+					</defs>
+					<clipPath id="SVGID_10_">
+						<use xlink:href="#SVGID_9_"  overflow="visible"/>
+					</clipPath>
+					<g transform="matrix(1 0 0 1 0 7.450581e-009)" clip-path="url(#SVGID_10_)">
+						
+							<image overflow="visible" enable-background="new    " width="296" height="338" xlink:href="EB151B03.jpeg"  transform="matrix(0.2368 0 0 0.2372 -4.882813e-004 0.1123)">
+						</image>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<rect y="0.112" fill="#1F202D" width="69.84" height="80.767"/>
+<image overflow="visible" width="200" height="160" xlink:href="wer.png"  transform="matrix(0.3141 0 0 0.3141 4.3882 16.1895)">
+</image>
+</svg>

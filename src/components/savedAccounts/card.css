@@ -1,0 +1,306 @@
+@import '../app/variables.css';
+
+:root {
+  --font-size-card-h2: 30px;
+  --font-size-card-h2-s: 20px;
+  --address-font-size: 17px;
+  --address-font-size-s: 14px;
+  --small-font-size: 20px;
+  --card-width: 347px;
+  --card-height: 436px;
+  --card-width-m: 267px;
+  --card-width-s: 227px;
+  --card-height-m: 336px;
+  --card-height-s: 280px;
+}
+
+.card {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: var(--card-width);
+  height: 276px;
+  border-radius: 6px;
+  background-color: rgba(112, 114, 141, 0.3);
+  margin: 12px;
+  text-align: center;
+  vertical-align: top;
+  padding: 20px;
+  box-shadow: 0 3px 0px #ed3c24;
+
+  & h2 {
+    position: relative !important;
+    font-size: 24px;
+    color: var(--color-white);
+    padding: 0 !important;
+    margin: 16px 0 0;
+    font-weight: bold;
+
+    &::before {
+      content: none;
+    }
+
+    & > small {
+      font-size: var(--small-font-size);
+    }
+  }
+
+  & .removeButton {
+    background: var(--color-white) !important;
+    color: var(--color-grayscale-dark) !important;
+    border: none;
+    box-shadow: var(--normal-shadow);
+    text-transform: none;
+
+    &:hover {
+      background: var(--color-white) !important;
+      color: var(--color-primary-medium) !important;
+    }
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.addNew {
+  background-color: #ed3c24;
+
+  & > h2 {
+    color: var(--color-white);
+    text-align: center;
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.address {
+  margin-bottom: 40px;
+  color: var(--color-grayscale-dark);
+  font-size: var(--address-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+.cardIcon {
+  width: auto;
+  height: auto;
+  margin: 0;
+  position: relative;
+}
+
+.plusShapeIcon {
+  width: 134px;
+  height: 134px;
+  margin: 24px;
+}
+
+/** shapes  **/
+.rectangleOnTheRight,
+.rectangleImage2,
+.rectangleImage3,
+.triangleImage,
+.circleImage {
+  position: absolute;
+  opacity: 0.8;
+}
+
+.logoPlaakDark {
+  position: absolute;
+  opacity: 0.4;
+}
+
+.circleImage {
+  right: 0px;
+  bottom: 64px;
+}
+
+.rectangleOnTheRight {
+  right: 30px;
+  bottom: 60px;
+  width: 10px;
+}
+
+.rectangleImage2 {
+  left: 50px;
+  bottom: 0px;
+  width: 20px;
+  display: none;
+}
+
+.rectangleImage3 {
+  left: 236px;
+  bottom: 0px;
+  width: 22px;
+  display: none;
+}
+
+.triangleImage {
+  left: 54px;
+  bottom: 92px;
+}
+
+.network {
+  display: none;
+}
+
+.network,
+.unlocked,
+.unlockedSecured {
+  font-size: var(--font-size-h6);
+  position: absolute;
+  top: 0;
+  padding: 24px;
+  color: var(--color-grayscale-dark);
+  font-weight: bold;
+
+  & > * {
+    vertical-align: bottom;
+  }
+}
+
+.unlocked {
+  left: 0;
+  padding-top: 25px;
+
+  & span {
+    margin-bottom: 3px;
+    transition: transform ease-in-out 500ms;
+  }
+
+  &:hover {
+    & span {
+      transform: scale(1.1);
+      transform-origin: 100%;
+    }
+  }
+}
+
+.unlockedSecured {
+  left: 0;
+  padding-top: 30px;
+}
+
+.network {
+  padding-top: 30px;
+  right: 0;
+}
+
+.darkBackground {
+  background-color: var(--color-primary-dark);
+}
+
+.removeConfirm {
+  position: absolute;
+  top: 0px;
+  background-color: var(--color-primary-dark);
+  color: var(--color-white);
+  border-radius: var(--border-radius-normal);
+  height: var(--card-height);
+
+  & h2 {
+    white-space: normal;
+    color: var(--color-white);
+    margin: 155px 45px 24px;
+  }
+
+  & a {
+    color: var(--color-white);
+    text-decoration: underline;
+    margin: 20px 40px 200px;
+    cursor: pointer;
+  }
+}
+
+@media (--medium-viewport) {
+  .card {
+    width: var(--card-width-m);
+    height: var(--card-height-m);
+
+    & h2 {
+      font-size: var(--font-size-card-h2);
+    }
+  }
+
+  .removeConfirm {
+    height: var(--card-height-m);
+  }
+
+  .cardIcon {
+    width: 175px;
+    height: 175px;
+    margin: 38px 48px 32px;
+  }
+
+  .address {
+    margin-bottom: 20px;
+  }
+}
+
+@media (--small-viewport) {
+  .card {
+    width: var(--card-width-m);
+    height: 320px;
+    margin: 0px 24px;
+  }
+
+  .cardIcon {
+    height: 130px;
+  }
+}
+
+@media (--xSmall-viewport) {
+  .card {
+    width: var(--card-width-s);
+    height: var(--card-height-s);
+    margin: 0px 24px;
+
+    & h2 {
+      margin: 15px 0;
+      padding: 0;
+      font-size: var(--font-size-card-h2-s);
+    }
+  }
+
+  .addNew {
+    overflow: hidden;
+  }
+
+  .plusShapeIcon {
+    margin: 24px auto;
+  }
+
+  .triangleImage {
+    left: 0;
+  }
+
+  .circleImage {
+    right: -54px;
+  }
+
+  .removeConfirm {
+    height: var(--card-height-s);
+  }
+
+  .network,
+  .unlocked,
+  .unlockedSecured {
+    padding: 10px;
+  }
+
+  .address {
+    font-size: var(--address-font-size-s);
+  }
+
+  .cardIcon {
+    height: 100px;
+    margin: 38px auto 0;
+  }
+}

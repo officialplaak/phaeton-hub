@@ -1,0 +1,128 @@
+@import './variables.css';
+@import './global.css';
+@import './type.css';
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.bodyWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  align-items: center;
+  display: flex;
+  z-index: 0;
+  padding-top: 0px;
+
+  & > section {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    opacity: 0;
+    transition: all ease 250ms;
+    position: relative;
+    z-index: 2;
+  }
+
+  &.loaded > section {
+    opacity: 1;
+  }
+
+  & > aside {
+    position: absolute;
+    height: auto;
+    top: 0px;
+    left: 0;
+    right: 0;
+    background: var(--menu-bg-new);
+    overflow: auto;
+    width: 50%;
+    z-index: 6;
+  }
+}
+
+section > div header {
+  padding-top: 0px !important;
+}
+
+body > div {
+  min-height: auto;
+}
+
+.hasMarginBottom {
+  margin-bottom: 20px;
+}
+
+/* move to type */
+.text-center {
+  text-align: center;
+}
+
+.mainBox {
+  margin: 0 auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (--medium-viewport) {
+  body {
+    background-color: var(--color-grayscale-mobile-background);
+    margin-top: var(--header-height-m);
+  }
+
+  .bodyWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+
+    & > section {
+      padding: 0;
+    }
+  }
+}
+
+@media (--xLarge-viewport) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (--large-viewport) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (--small-viewport) {
+  body {
+    margin-top: var(--header-height-s);
+  }
+
+  html.on-device,
+  html.on-device body {
+    -webkit-overflow-scrolling: touch !important;
+    overflow: auto !important;
+    height: 100% !important;
+  }
+}
+
+@media (--xSmall-viewport) {
+  body {
+    font-size: 14px;
+  }
+}

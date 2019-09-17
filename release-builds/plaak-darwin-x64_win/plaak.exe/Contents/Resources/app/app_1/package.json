@@ -1,0 +1,10 @@
+{
+  "name": "phaeton-hub",
+  "version": "1.0.0-rc.1",
+  "description": "Phaeton Hub",
+  "main": "./build/main.js",
+  "author": {
+    "name": "Phaeton Foundation",
+    "email": "admin@phaeton.io"
+  }
+}

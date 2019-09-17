@@ -1,0 +1,91 @@
+@import '../app/variables.css';
+
+:root {
+  --icon-font-size: 22px;
+  --tab-inactive-color: --color-grayscale-dark;
+  --error-font-size-XL: 16px;
+  --error-font-size-L: 14px;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.checkbox {
+  visibility: hidden;
+  position: hidden;
+}
+
+.test {
+  padding-left: 40px;
+}
+
+.inputTypeToggle {
+  position: absolute;
+  right: 0;
+  font-size: 16px;
+  font-weight: var(--font-weight-semi-bold);
+  color: #8e97a1 !important;
+  top: -33px;
+  cursor: pointer;
+
+  & label {
+    text-transform: capitalize;
+  }
+
+  & .eyeIcon {
+    font-size: var(--icon-font-size);
+  }
+}
+
+.inputWrapper input {
+  padding-right: 35px;
+  border-radius: 0;
+}
+
+.errorMessage {
+  color: #ed3c24;
+  height: auto;
+  font-weight: var(--font-weight-semi-bold);
+  padding-top: 10px;
+  padding-bottom: 22px;
+  text-align: center;
+}
+
+.error input {
+  color: var(--color-error) !important;
+}
+
+.partial input {
+  text-align: center;
+  border-radius: 0;
+}
+
+@media (--small-viewport) {
+  .inputTypeToggle {
+    top: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .errorMessage {
+    padding-bottom: 10px;
+  }
+
+  .wrapper {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+}
+
+@media (--large-viewport) {
+  .errorMessage {
+    font-size: var(--error-font-size-L);
+  }
+}
+
+@media (--xLarge-viewport) {
+  .errorMessage {
+    font-size: var(--error-font-size-XL);
+  }
+}

@@ -1,0 +1,152 @@
+@import '../app/variables.css';
+
+.wrapper {
+  width: 100%;
+  margin: 30px auto;
+
+  & aside {
+    display: none;
+  }
+}
+
+.popuptext {
+    font-size: 20px;
+}
+
+.votingCheckbox {
+  display: block;
+}
+
+.main {
+  max-height: 100%;
+  overflow-y: hidden;
+  flex-basis: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+}
+
+.seeAllLink {
+  font-size: 15px;
+  color: var(--color-primary-standard);
+  margin-left: 0px;
+  text-decoration: none;
+  font-family: var(--content-font);
+  font-weight: var(--font-weight-bold);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 14px 22px;
+  border-radius: 6px;
+}
+
+.send {
+  position: relative;
+}
+
+.bottomModuleWrapper {
+  height: 50%;
+  min-height: 200px;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 33px;
+}
+
+.bottomModuleWrapper > .flexboxgrid__col-md-8___3979J {
+  flex-basis: 70%;
+  max-width: 70%;
+}
+
+.graph {
+  overflow: hidden;
+  padding: 0px;
+}
+
+.latestActivity {
+  margin: 0px 0px 20px;
+  float: none;
+  background: rgba(112, 114, 141, 0.3);
+  width: 100%;
+  position: relative;
+  top: 0;
+  border-radius: 6px;
+  padding: 28px 38px;
+  margin-top: 0px;
+  min-height: 640px;
+
+  & header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & > h2 {
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+
+  & header {
+    padding: 0;
+  }
+
+  & header h2 {
+    margin-top: 0;
+  }
+
+  & div ~ h2:last-child::before {
+    content: inherit;
+  }
+
+  & div ~ h2:last-child {
+    padding-bottom: 0 !important;
+    line-height: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (--medium-viewport) {
+  .wrapper {
+    & .main {
+      max-width: 100%;
+      flex-basis: 100%;
+    }
+
+    margin: 0;
+  }
+
+  .graph {
+    height: 60%;
+    min-height: 300px;
+    margin-bottom: 0;
+  }
+
+  .latestActivity {
+    height: unset;
+    min-height: unset;
+  }
+}
+
+@media (--small-viewport) {
+  .seeAllLink {
+    display: block;
+    margin-top: 16px;
+    margin-left: 0;
+  }
+}
+
+h2 {
+  position: relative !important;
+  padding-bottom: 18px !important;
+  color: #fff;
+  font-weight: 600 !important;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    border-radius: 2000px;
+    background: #fff;
+    width: 60px;
+    height: 4px;
+  }
+}
+

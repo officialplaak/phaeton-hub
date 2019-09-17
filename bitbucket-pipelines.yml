@@ -1,0 +1,67 @@
+# This is a sample build configuration for JavaScript.
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+
+pipelines:
+
+  default:  # Both steps run on all feature branch commits
+      - step:
+          name: Build and Test
+          image: node:8.1.2
+          caches:
+            - node
+          script:
+            - npm install
+            - chmod -R 777 ./node_modules/phaeton-validator/
+            - cp -R ./phaeton-validator/ ./node_modules/phaeton-validator/
+            - npm run dev #--------------------for run ng build only
+          artifacts: # makes the built dist folder available to all subsequent steps
+            - app/build/**
+
+      - step:
+          name: Deploy to Development
+          image: node:8.1.2
+          caches:
+            - node
+          script:
+            - npm install netlify-cli -g
+            - netlify deploy -p dist -s $STAGING_SITE_ID -t $NETLIFY_TOKEN
+
+  branches:
+    master:
+      - step:
+          name: Build and Test
+          image: node:8.1.2
+          deployment: test
+          caches:
+            - node
+          script:
+            - npm install
+            - chmod -R 777 ./node_modules/phaeton-validator/
+            - cp -R ./phaeton-validator/ ./node_modules/phaeton-validator/
+            - npm run build
+          artifacts: # makes the built dist folder available to all subsequent steps
+            - app/build/**
+      
+      - step:
+          name: Deploy to Staging
+          image: node:8.1.2
+          deployment: staging
+          caches:
+            - node
+          script:
+            - npm install netlify-cli -g
+            - netlify deploy -p app/build/ -s $STAGING_SITE_ID -t $NETLIFY_TOKEN
+
+      - step:
+          name: Deploy to Production
+          image: node:8.1.2
+          deployment: production
+          trigger: manual # comment this out to auto deploy to production
+          caches:
+            - node
+          script:
+            - npm install netlify-cli -g
+            - netlify deploy -p app/build/ -s $PRODUCTION_SITE_ID -t $NETLIFY_TOKEN

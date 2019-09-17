@@ -1,0 +1,10 @@
+@import './base.css';
+
+.button {
+  min-height: 62px;
+  font-size: 16px;
+
+  @mixin buttonBasics;
+  @mixin buttonSecondary--light;
+}
+

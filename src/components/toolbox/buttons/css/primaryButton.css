@@ -1,0 +1,13 @@
+@import './base.css';
+
+.button {
+  padding: 8px 20px;
+  min-height: 41px !important;
+  font-size: 16px !important;
+  text-transform: capitalize !important;
+  width: 260px !important;
+  margin: 0 auto;
+
+  @mixin buttonBasics;
+  @mixin buttonPrimary;
+}
