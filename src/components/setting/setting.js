@@ -11,7 +11,7 @@ import settingsConst from './../../constants/settings';
 import routes from '../../constants/routes';
 import { FontIcon } from '../fontIcon';
 import Box from '../box';
-import plk from '../../assets/images/plaak/plk.png';
+import pha from '../../assets/images/phaeton/pha.png';
 // import languageSwitcherTheme from './languageSwitcher.css';
 
 const sectionBackgroundStyle = {
@@ -23,7 +23,7 @@ const sectionBackgroundStyle = {
   backgroundPosition: 'center',
   width: '24%',
   height: '249px',
-  backgroundImage: `url(${plk})`,
+  backgroundImage: `url(${pha})`,
 };
 
 class Setting extends React.Component {

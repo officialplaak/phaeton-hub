@@ -34,7 +34,7 @@ class AccountInitialization extends React.Component {
         <p>{t('It is recommended that you initialize your Phaeton ID.')}</p>
         <p>{t('The easiest way to do this is to send LSK to yourself. It will cost you only the usual {{fee}} LSK transaction fee.', { fee: fromRawLsk(fees.send) })}</p>
         <p>
-          <a target='_blank' href='https://plaak.com' rel='noopener noreferrer'>
+          <a target='_blank' href='https://phaeton.com' rel='noopener noreferrer'>
             {t('Learn more about Phaeton ID initialization')} <FontIcon>arrow-right</FontIcon>
           </a>
         </p>

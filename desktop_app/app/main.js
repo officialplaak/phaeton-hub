@@ -12,14 +12,14 @@ function createWindow() {
     height: height,
     backgroundColor: '#171820',
     show: false,
-    icon: path.join(__dirname, '/assets/Plaak-Wallet-Splash.png')
+    icon: path.join(__dirname, '/assets/Phaeton-Wallet-Splash.png')
   });
   //mainWindow.openDevTools();
   //console.log(path.join(__dirname, '/build/index.html'));
   mainWindow.loadURL(`file://${path.join(__dirname, '/build/index.html')}`);
 
   app.setAboutPanelOptions({
-    applicationName: "plaak Desktop Wallet",
+    applicationName: "phaeton Desktop Wallet",
     applicationVersion: "0.1.0",
   })
   mainWindow.once('ready-to-show', () => {
@@ -30,7 +30,7 @@ function createWindow() {
   mainWindow.on('closed', () => mainWindow = null);
 
   var template = Menu_opt.buildFromTemplate([{
-        label: "Plaak Desktop Wallet",
+        label: "Phaeton Desktop Wallet",
         submenu: [
             { label: "About Application", selector: "orderFrontStandardAboutPanel:" },
             { type: "separator" },

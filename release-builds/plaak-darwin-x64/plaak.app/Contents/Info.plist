@@ -5,17 +5,17 @@
     <key>BuildMachineOSBuild</key>
     <string>16G1212</string>
     <key>CFBundleDisplayName</key>
-    <string>plaak</string>
+    <string>phaeton</string>
     <key>CFBundleExecutable</key>
-    <string>plaak</string>
+    <string>phaeton</string>
     <key>CFBundleIconFile</key>
     <string>electron.icns</string>
     <key>CFBundleIdentifier</key>
-    <string>com.electron.plaak</string>
+    <string>com.electron.phaeton</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>plaak</string>
+    <string>phaeton</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleShortVersionString</key>

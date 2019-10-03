@@ -7,7 +7,7 @@ import styles from './search.css';
 const SearchResult = ({ t }) => (
   <Box className={styles.resultWrapper}>
     <EmptyState title={t('No results')}
-      message={t('Search for Plaak ID or Transaction ID')} />
+      message={t('Search for Phaeton ID or Transaction ID')} />
   </Box>
 );
 

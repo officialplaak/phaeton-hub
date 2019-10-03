@@ -1,10 +1,10 @@
 {
-  "name": "plaak-hub",
+  "name": "phaeton-hub",
   "version": "1.0.0-rc.1",
-  "description": "Plaak Hub",
+  "description": "Phaeton Hub",
   "main": "./build/main.js",
   "author": {
-    "name": "Plaak Foundation",
+    "name": "Phaeton Foundation",
     "email": "admin@phaeton.io"
   }
 }

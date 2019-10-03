@@ -36,7 +36,7 @@ class CreateFirst extends React.Component {
           <TransitionWrapper current={step} step='generate'>
             <h3 className={`${styles.generatorHeader}`}
               id="generatorHeader" >
-              {t('Create your PLAAK ID by moving your mouse.')}
+              {t('Create your PHAETON ID by moving your mouse.')}
             </h3>
           </TransitionWrapper>
           <TransitionWrapper current={step} step='generate' id='movingWrap'>
@@ -53,12 +53,12 @@ class CreateFirst extends React.Component {
           </TransitionWrapper>
           <TransitionWrapper current={step} step='info'>
             <h3 className={`${styles.secondHeading}`}>
-              {t('This is your PLAAK ID')}
+              {t('This is your PHAETON ID')}
             </h3>
           </TransitionWrapper>
           <aside className={`${styles.description} ${step === 'info' && this.state.showHint ? styles.fadeIn : ''}`}>
             <p>The <b>Avatar</b> represents the ID making it easy to recognize.
-              Every PLAAK ID has one unique avatar.</p>
+              Every PHAETON ID has one unique avatar.</p>
             <p>The <b>ID</b> is unique and can’t be changed.
               It’s yours.You will get the full <b>ID</b> at the end.</p>
             <Button
@@ -79,8 +79,8 @@ class CreateFirst extends React.Component {
               className="get-passphrase-button"
               onClick={() => nextStep({
                 passphrase,
-                header: t('Your passphrase is used to access your PLAAK ID.'),
-                message: t('You are responsible for keeping my passphrase safe. No one can reset it, not even PLAAK.'),
+                header: t('Your passphrase is used to access your PHAETON ID.'),
+                message: t('You are responsible for keeping my passphrase safe. No one can reset it, not even PHAETON.'),
               })}
             />
           </Fragment>

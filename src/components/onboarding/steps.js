@@ -227,7 +227,7 @@ export const steps = t => ([
   },
   {
     title: t('You’ve completed the tour!'),
-    text: t('You can now use Plaak Hub.<br> If you want to repeat the onboarding, navigate to "Settings" on the sidebar.'),
+    text: t('You can now use Phaeton Hub.<br> If you want to repeat the onboarding, navigate to "Settings" on the sidebar.'),
     selector: '#onboardingAnchor',
     position: 'bottom',
     style: styles.outro,

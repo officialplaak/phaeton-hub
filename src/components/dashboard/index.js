@@ -50,7 +50,7 @@ class Dashboard extends React.Component {
     return <div className={`${grid.row} ${styles.wrapper}`}>
       <div className={`${grid['col-md-12']} ${grid['col-xs-12']} ${styles.main}`}>
       <div>
-        <SkyLight dialogStyles={myDialog} hideOnOverlayClicked ref={(ref) => { this.simpleDialog = ref; } } title="Initialize PLAAK ID">
+        <SkyLight dialogStyles={myDialog} hideOnOverlayClicked ref={(ref) => { this.simpleDialog = ref; } } title="Initialize PHAETON ID">
         <div className={`${styles.popuptext}`}>
           You need to initialize your account prior to performing any transactions.
         </div>

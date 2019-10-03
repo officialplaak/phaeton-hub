@@ -2,10 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import grid from 'flexboxgrid/dist/flexboxgrid.css';
 import styles from './peers.css';
-// import barMap from '../../assets/images/plaak/Barmap.png';
-// import lineMap from '../../assets/images/plaak/lineChart.png';
-// import pieMap from '../../assets/images/plaak/pieChart.png';
-// import abstract from '../../assets/images/plaak/abstractMap.png';
+// import barMap from '../../assets/images/phaeton/Barmap.png';
+// import lineMap from '../../assets/images/phaeton/lineChart.png';
+// import pieMap from '../../assets/images/phaeton/pieChart.png';
+// import abstract from '../../assets/images/phaeton/abstractMap.png';
 // import trsStyles from '../transactions/transactionList.css';
 // import Box from '../box';
 

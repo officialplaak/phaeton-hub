@@ -1,5 +1,5 @@
 {
-  "name": "plaak",
+  "name": "phaeton",
   "version": "0.1.0",
   "main": "app/main.js",
   "private": true,
@@ -9,11 +9,11 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron-start": "electron .",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=app/assets/Plaak-Wallet-Splash.icns --prune=true --out=release-builds",
-"package-win": "electron-packager . plaak-wallet --overwrite --asar=true --platform=win32 --arch=ia32 --icon=app/assets/Plaak-Wallet-Splash.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"plaak-wallet\"",    
-"package-linux": "electron-packager . plaak-wallet --overwrite --asar=true --platform=linux --arch=x64 --icon=app/assets/pngs/Plaak-Wallet-Splash.png_512x512.png --prune=true --out=release-builds"
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=app/assets/Phaeton-Wallet-Splash.icns --prune=true --out=release-builds",
+"package-win": "electron-packager . phaeton-wallet --overwrite --asar=true --platform=win32 --arch=ia32 --icon=app/assets/Phaeton-Wallet-Splash.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"phaeton-wallet\"",    
+"package-linux": "electron-packager . phaeton-wallet --overwrite --asar=true --platform=linux --arch=x64 --icon=app/assets/pngs/Phaeton-Wallet-Splash.png_512x512.png --prune=true --out=release-builds"
   },
-  "author": "PLAAK",
+  "author": "PHAETON",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",

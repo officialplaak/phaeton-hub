@@ -1,10 +1,10 @@
 {
-  "name": "plaak-phaeton-wallet",
+  "name": "phaeton-phaeton-wallet",
   "version": "1.0.0-rc.1",
-  "description": "PLAAK PHAETON WALLET",
+  "description": "PHAETON WALLET",
   "main": "./build/main.js",
   "author": {
-    "name": "PLAAK PHAETON WALLET",
-    "email": "admin@plaak.com"
+    "name": "PHAETON WALLET",
+    "email": "admin@phaeton.com"
   }
 }

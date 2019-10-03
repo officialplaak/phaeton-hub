@@ -5,13 +5,13 @@
     <key>BuildMachineOSBuild</key>
     <string>16G1212</string>
     <key>CFBundleDisplayName</key>
-    <string>plaak Helper EH</string>
+    <string>phaeton Helper EH</string>
     <key>CFBundleExecutable</key>
-    <string>plaak Helper EH</string>
+    <string>phaeton Helper EH</string>
     <key>CFBundleIdentifier</key>
-    <string>com.electron.plaak.helper.EH</string>
+    <string>com.electron.phaeton.helper.EH</string>
     <key>CFBundleName</key>
-    <string>plaak Helper EH</string>
+    <string>phaeton Helper EH</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>DTSDKBuild</key>

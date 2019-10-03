@@ -5,9 +5,9 @@
     <key>BuildMachineOSBuild</key>
     <string>16G1212</string>
     <key>CFBundleIdentifier</key>
-    <string>com.electron.plaak.helper</string>
+    <string>com.electron.phaeton.helper</string>
     <key>CFBundleName</key>
-    <string>plaak</string>
+    <string>phaeton</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>DTSDKBuild</key>
@@ -23,8 +23,8 @@
     <key>NSSupportsAutomaticGraphicsSwitching</key>
     <true/>
     <key>CFBundleDisplayName</key>
-    <string>plaak Helper</string>
+    <string>phaeton Helper</string>
     <key>CFBundleExecutable</key>
-    <string>plaak Helper</string>
+    <string>phaeton Helper</string>
   </dict>
 </plist>

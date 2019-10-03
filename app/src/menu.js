@@ -17,15 +17,15 @@ const addAboutMenuForMac = ({ template, name }) => {
 };
 
 const addAboutMenuForNonMac = ({ template, electron }) => {
-  const copyright = `Copyright © 2019 - ${new Date().getFullYear()} PLAAK PHAETON WALLET`;
+  const copyright = `Copyright © 2019 - ${new Date().getFullYear()} PHAETON WALLET`;
   template[template.length - 1].submenu.push({
     label: i18n.t('About'),
     click(item, focusedWindow) {
       if (focusedWindow) {
         const options = {
           buttons: ['OK'],
-          icon: `${__dirname}/assets/images/plaak.png`,
-          message: `${i18n.t('PLAAK PHAETON WALLET')}\n${i18n.t('Version')} ${electron.app.getVersion()}\n${copyright}`,
+          icon: `${__dirname}/assets/images/phaeton.png`,
+          message: `${i18n.t('PHAETON WALLET')}\n${i18n.t('Version')} ${electron.app.getVersion()}\n${copyright}`,
         };
         electron.dialog.showMessageBox(focusedWindow, options, () => {});
       }
@@ -116,12 +116,12 @@ const menu = {
         label: i18n.t('Help'),
         submenu: [
           {
-            label: i18n.t('PLAAK Website'),
-            click: menu.onClickLink.bind(null, electron, 'https://plaak.com/'),
+            label: i18n.t('PHAETON Website'),
+            click: menu.onClickLink.bind(null, electron, 'https://phaeton.com/'),
           },
           {
-            label: i18n.t('PLAAK Explorer'),
-            click: menu.onClickLink.bind(null, electron, 'https://explorer.plaak.com/'),
+            label: i18n.t('PHAETON Explorer'),
+            click: menu.onClickLink.bind(null, electron, 'https://explorer.phaeton.com/'),
           },
           {
             type: 'separator',

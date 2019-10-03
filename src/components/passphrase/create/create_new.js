@@ -59,7 +59,7 @@ class CreateFirst extends React.Component {
           <div current={step} step='generate'>
             <h3 className={`${styles.generatorHeader}`}
               id="generatorHeader" >
-              {t('Create your PLAAK ID by moving your mouse.')}
+              {t('Create your PHAETON ID by moving your mouse.')}
             </h3>
           </div>
           <div current={step} step='generate' id='movingWrap'>
@@ -89,8 +89,8 @@ class CreateFirst extends React.Component {
               className="get-passphrase-button"
               onClick={() => nextStep({
                 passphrase,
-                header: t('Your passphrase is used to access your PLAAK ID.'),
-                message: t('You are responsible for keeping my passphrase safe. No one can reset it, not even PLAAK.'),
+                header: t('Your passphrase is used to access your PHAETON ID.'),
+                message: t('You are responsible for keeping my passphrase safe. No one can reset it, not even PHAETON.'),
               })}
             />
           </Fragment>

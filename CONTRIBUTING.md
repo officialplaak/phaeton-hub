@@ -21,7 +21,7 @@ Before you start, read the **[README.md](/README.md)** file for info on the proj
 ## Finding first issue
 Go to [issues tab](https://bitbucket.org/anoopsam/plaak_hub/issues) and look for 
 
-*✏️ `good first issue`* - it is a label for tasks that are perfect for people who want to start with plaak-hub.
+*✏️ `good first issue`* - it is a label for tasks that are perfect for people who want to start with phaeton-hub.
 
 ## Reporting issues
 

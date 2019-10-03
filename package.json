@@ -1,7 +1,7 @@
 {
-  "name": "plaak-phaeton-wallet",
+  "name": "phaeton-phaeton-wallet",
   "version": "1.0.0",
-  "description": "PLAAK PHAETON WALLET",
+  "description": "PHAETON WALLET",
   "homepage": "https://github.com/officialplaak/Phaeton-docs",
   "bugs": "https://github.com/officialplaak/Phaeton-docs",
   "main": "main.js",
@@ -33,11 +33,11 @@
     "build-storybook": "build-storybook",
     "serve": "http-server"
   },
-  "author": "PLAAK PHAETON WALLET",
+  "author": "PHAETON WALLET",
   "license": "GPL-3.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/plaak/plaak-phaeton-wallet"
+    "url": "https://github.com/phaeton/phaeton-phaeton-wallet"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -189,15 +189,15 @@
     "webpack-file-changer": "2.0.1"
   },
   "build": {
-    "appId": "io.plaak.phaeton.wallet",
-    "productName": "PLAAK PHAETON WALLET",
+    "appId": "io.phaeton.phaeton.wallet",
+    "productName": "PHAETON WALLET",
     "protocols": {
-      "name": "plaak-phaeton-wallet",
+      "name": "phaeton-phaeton-wallet",
       "schemes": [
-        "plaak"
+        "phaeton"
       ]
     },
-    "artifactName": "plaak-phaeton-wallet-${os}-${arch}-${version}.${ext}",
+    "artifactName": "phaeton-phaeton-wallet-${os}-${arch}-${version}.${ext}",
     "publish": [
       "github"
     ],
@@ -206,7 +206,7 @@
         "AppImage"
       ],
       "desktop": {
-        "MimeType": "application/plaak;x-scheme-handler/plaak"
+        "MimeType": "application/phaeton;x-scheme-handler/phaeton"
       },
       "category": "Network"
     },

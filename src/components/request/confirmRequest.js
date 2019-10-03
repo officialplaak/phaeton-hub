@@ -18,7 +18,7 @@ class ConfirmRequest extends React.Component {
     const {
       address, amount, prevStep, finalCallback, t,
     } = this.props;
-    const link = `https://wallet.plaak.com/#/wallet?recipient=${address}&amount=${amount}`;
+    const link = `https://wallet.phaeton.com/#/wallet?recipient=${address}&amount=${amount}`;
     return (
       <div className={`${styles.wrapper} confirm-request-step`}>
         <div className={styles.header}>

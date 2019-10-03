@@ -129,7 +129,7 @@ const menu = {
           },
           {
             label: i18n.t('Phaeton Explorer'),
-            click: menu.onClickLink.bind(null, electron, 'https://explorer.plaak.com/'),
+            click: menu.onClickLink.bind(null, electron, 'https://explorer.phaeton.com/'),
           },
           {
             label: i18n.t('Phaeton Academy'),

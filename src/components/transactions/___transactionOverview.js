@@ -9,7 +9,7 @@ import TransactionList from './transactionList';
 import styles from './transactions.css';
 import txFilters from './../../constants/transactionFilters';
 import { getIndexOfFollowedAccount } from './../../utils/followedAccounts';
-import plaaklogo from './../../assets/images/plaak/plaak_200_200.png';
+import plaaklogo from './../../assets/images/phaeton/plaak_200_200.png';
 
 class TransactionsOverview extends React.Component {
   constructor(props) {

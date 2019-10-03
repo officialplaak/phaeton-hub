@@ -10,7 +10,7 @@ import styles from './request.css';
 class Request extends React.Component {
   render() {
     const { t, setTabSend, account } = this.props;
-    // const link = `https://wallet.plaak.com/#/wallet?recipient=${account.address}`;
+    // const link = `https://wallet.phaeton.com/#/wallet?recipient=${account.address}`;
     return (
       <div className={`${styles.wrapper}`}>
         <div>

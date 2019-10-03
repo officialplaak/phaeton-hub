@@ -25,7 +25,7 @@ class TransactionRow extends React.Component {
     const conf = {
       headers: { 'Access-Control-Allow-Origin': '*' },
     };
-    const URL = `https://testnet.plaak.com/api/transactions?limit=25&offset=0&sort=timestamp:desc&senderIdOrRecipientId=${this.props.address}`;
+    const URL = `https://testnet.phaeton.com/api/transactions?limit=25&offset=0&sort=timestamp:desc&senderIdOrRecipientId=${this.props.address}`;
     axios.get(URL, conf)
       .then((res) => {
         if (res.data.data[0].confirmations === 1) {

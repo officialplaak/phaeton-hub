@@ -24,8 +24,8 @@ class ErrorBoundary extends React.Component {
 
   render() {
     const getMailReference = () => {
-      const recipient = 'business@plaak.com';
-      const subject = `User Reported Error - PLAAK Web Wallet - ${VERSION}`; // eslint-disable-line no-undef
+      const recipient = 'business@phaeton.com';
+      const subject = `User Reported Error - PHAETON Web Wallet - ${VERSION}`; // eslint-disable-line no-undef
       const body = `${this.state.error}:%0A${this.state.info.componentStack.replace(/\s{4}/g, '%0A')}`;
       return `mailto:${recipient}?&subject=${subject}&body=${body}`;
     };

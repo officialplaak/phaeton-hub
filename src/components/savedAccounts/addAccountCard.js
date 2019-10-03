@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../../constants/routes';
-import LogoDarkBox from '../../assets/images/plaak_box_img_red_dark.png';
+import LogoDarkBox from '../../assets/images/phaeton_box_img_red_dark.png';
 import styles from './card.css';
 
 const AddAccountCard = ({ t }) =>

@@ -10,13 +10,13 @@ function createWindow() {
     height: 720,
     backgroundColor: '#171820',
     show: false,
-    icon: path.join(__dirname, '/assets/Plaak-Wallet-Splash.png')
+    icon: path.join(__dirname, '/assets/Phaeton-Wallet-Splash.png')
   });
   console.log(path.join(__dirname, '/build/index.html'));
   mainWindow.loadURL(`file://${path.join(__dirname, '/build/index.html')}`);
 
   app.setAboutPanelOptions({
-    applicationName: "plaak Desktop Wallet",
+    applicationName: "phaeton Desktop Wallet",
     applicationVersion: "0.1.0",
   })
   mainWindow.once('ready-to-show', () => {

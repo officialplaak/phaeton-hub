@@ -36,8 +36,8 @@ app.on('window-all-closed', () => {
 
 // This will override the values defined in the app’s .plist file (macOS)
 if (process.platform === 'darwin') {
-  const copyright = `Copyright © 2019 - ${new Date().getFullYear()} PLAAK PHAETON WALLET`;
-  app.setAboutPanelOptions({ applicationName: 'PLAAK PHAETON WALLET', copyright });
+  const copyright = `Copyright © 2019 - ${new Date().getFullYear()} PHAETON WALLET`;
+  app.setAboutPanelOptions({ applicationName: 'PHAETON WALLET', copyright });
 }
 
 app.on('activate', () => {

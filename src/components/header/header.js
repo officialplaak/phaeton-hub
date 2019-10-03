@@ -13,7 +13,7 @@ import { ActionButton } from './../toolbox/buttons/button';
 import styles from './header.css';
 import CustomCountDown from './customCountDown';
 import routes from './../../constants/routes';
-import accountSqure from './../../assets/images/plaak/account.png';
+import accountSqure from './../../assets/images/phaeton/account.png';
 import MainMenu from '../mainMenu';
 
 class Header extends React.Component {

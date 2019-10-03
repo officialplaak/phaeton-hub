@@ -5,7 +5,7 @@ import React from 'react';
 import generateUniqueId from './../../utils/generateUniqueId';
 import breakpoints from './../../constants/breakpoints';
 import styles from './accountVisual.css';
-import accountSqure from './../../assets/images/plaak/account.png';
+import accountSqure from './../../assets/images/phaeton/account.png';
 
 /*
  * Account Visual

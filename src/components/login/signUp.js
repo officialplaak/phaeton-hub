@@ -13,13 +13,13 @@ const SignUp = ({ t, passInputState }) =>
       <div className='text-left'>
         <h2>
           <Link className='new-account-button' to={routes.register.path}>
-            {t('Create Plaak ID')}
+            {t('Create Phaeton ID')}
           </Link>
           <FontIcon className={styles.singUpArrow} value='arrow-right' />
         </h2>
 
         <div className={styles.subTitle}>
-          {t('Create a Plaak ID to gain access to all services.')}
+          {t('Create a Phaeton ID to gain access to all services.')}
         </div>
       </div>
     </section>

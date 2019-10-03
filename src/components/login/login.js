@@ -18,7 +18,7 @@ import Box from '../box';
 // eslint-disable-next-line import/no-unresolved
 import SignUp from './signUp';
 import { validateUrl } from '../../utils/login';
-import signbkg from '../../assets/images/plaak/sign-bkg.png';
+import signbkg from '../../assets/images/phaeton/sign-bkg.png';
 
 /**
  * The container component containing login
@@ -109,7 +109,7 @@ class Login extends React.Component {
     const network = {
       name: 'Custom Node',
       custom: true,
-      address: 'http://localhost:8000',
+      address: 'http://149.28.172.230:8000',
       code: 2,
     };
     this.secondIteration = true;
