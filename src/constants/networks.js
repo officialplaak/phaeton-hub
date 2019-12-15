@@ -3,7 +3,7 @@ const networks = {
     name: 'Mainnet',
     code: 0,
     nodes: [
-      'http://localhost:8000',
+      'https://core.plaak.com/',
     ],
   },
   testnet: { // network name translation t('Testnet');
@@ -17,7 +17,7 @@ const networks = {
   customNode: { // network name translation t('Custom Node'); 13.250.116.189
     name: 'Custom Node',
     custom: true,
-    address: 'http://localhost:8000',
+    address: 'https://core.plaak.com/',
     code: 2,
   },
 };

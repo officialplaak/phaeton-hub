@@ -109,7 +109,7 @@ class Login extends React.Component {
     const network = {
       name: 'Custom Node',
       custom: true,
-      address: 'http://localhost:8000',
+      address: 'https://core.plaak.com/',
       code: 2,
     };
     this.secondIteration = true;

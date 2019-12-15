@@ -17,6 +17,7 @@ module.exports = merge(baseConfig, reactConfig, {
     port: 9002,
     historyApiFallback: true,
     host: '0.0.0.0',
+    disableHostCheck: true
   },
   plugins: [
     new webpack.DefinePlugin({
