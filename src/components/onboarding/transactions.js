@@ -98,7 +98,7 @@ class Transactions {
  * @returns {setImmediateCallback} cb, err, {transactions, count}
  * @todo Add description for the params
  */
-__private.list = function(filter, cb) {
+__private.list = function (filter, cb) {
 	const params = {};
 	const where = [];
 	const allowedFieldsMap = {
@@ -137,7 +137,7 @@ __private.list = function(filter, cb) {
 	 * @todo Add @returns tag
 	 * @todo Add description of the function
 	 */
-	const processParams = function(value, field) {
+	const processParams = function (value, field) {
 		// Mutating parametres when unix timestamp is supplied
 		if (_.includes(['fromUnixTime', 'toUnixTime'], field)) {
 			// Phaeton epoch is 1464109200 as unix timestamp
@@ -304,7 +304,7 @@ function groupTransactionIdsByType(rawTransactions) {
  * @todo Add @returns tag
  * @todo Add description of the function
  */
-__private.getAssetForIds = function(idsByType) {
+__private.getAssetForIds = function (idsByType) {
 	const assetRawRows = _.values(
 		_.mapValues(idsByType, __private.getAssetForIdsBasedOnType)
 	);
@@ -319,7 +319,7 @@ __private.getAssetForIds = function(idsByType) {
  * @todo Add @returns tag
  * @todo Add description of the function
  */
-__private.getQueryNameByType = function(type) {
+__private.getQueryNameByType = function (type) {
 	const queryNames = {};
 	queryNames[transactionTypes.SEND] = 'getTransferByIds';
 	queryNames[transactionTypes.SIGNATURE] = 'getSignatureByIds';
@@ -342,7 +342,7 @@ __private.getQueryNameByType = function(type) {
  * @todo Add @returns tag
  * @todo Add description of the function
  */
-__private.getAssetForIdsBasedOnType = function(ids, type) {
+__private.getAssetForIdsBasedOnType = function (ids, type) {
 	const queryName = __private.getQueryNameByType(type);
 
 	return library.db.transactions[queryName](ids);
@@ -367,7 +367,7 @@ __private.getAssetForIdsBasedOnType = function(ids, type) {
  * @param {function} cb - Callback function
  * @returns {setImmediateCallback} cb, err, {transactions, count}
  */
-__private.getPooledTransactions = function(method, filters, cb) {
+__private.getPooledTransactions = function (method, filters, cb) {
 	const transactions = self[method](true);
 	let toSend = [];
 
@@ -440,7 +440,7 @@ __private.getPooledTransactions = function(method, filters, cb) {
  * @returns {function} Calls transactionPool.transactionInPool
  * @todo Add description for the params
  */
-Transactions.prototype.transactionInPool = function(id) {
+Transactions.prototype.transactionInPool = function (id) {
 	return __private.transactionPool.transactionInPool(id);
 };
 
@@ -451,7 +451,7 @@ Transactions.prototype.transactionInPool = function(id) {
  * @returns {function} Calls transactionPool.getUnconfirmedTransaction
  * @todo Add description for the function and the params
  */
-Transactions.prototype.getUnconfirmedTransaction = function(id) {
+Transactions.prototype.getUnconfirmedTransaction = function (id) {
 	return __private.transactionPool.getUnconfirmedTransaction(id);
 };
 
@@ -462,7 +462,7 @@ Transactions.prototype.getUnconfirmedTransaction = function(id) {
  * @returns {function} Calls transactionPool.getQueuedTransaction
  * @todo Add description for the function and the params
  */
-Transactions.prototype.getQueuedTransaction = function(id) {
+Transactions.prototype.getQueuedTransaction = function (id) {
 	return __private.transactionPool.getQueuedTransaction(id);
 };
 
@@ -473,7 +473,7 @@ Transactions.prototype.getQueuedTransaction = function(id) {
  * @returns {function} Calls transactionPool.getMultisignatureTransaction
  * @todo Add description for the function and the params
  */
-Transactions.prototype.getMultisignatureTransaction = function(id) {
+Transactions.prototype.getMultisignatureTransaction = function (id) {
 	return __private.transactionPool.getMultisignatureTransaction(id);
 };
 
@@ -485,7 +485,7 @@ Transactions.prototype.getMultisignatureTransaction = function(id) {
  * @returns {function} Calls transactionPool.getUnconfirmedTransactionList
  * @todo Add description for the params
  */
-Transactions.prototype.getUnconfirmedTransactionList = function(
+Transactions.prototype.getUnconfirmedTransactionList = function (
 	reverse,
 	limit
 ) {
@@ -503,7 +503,7 @@ Transactions.prototype.getUnconfirmedTransactionList = function(
  * @returns {function} Calls transactionPool.getQueuedTransactionList
  * @todo Add description for the params
  */
-Transactions.prototype.getQueuedTransactionList = function(reverse, limit) {
+Transactions.prototype.getQueuedTransactionList = function (reverse, limit) {
 	return __private.transactionPool.getQueuedTransactionList(reverse, limit);
 };
 
@@ -515,7 +515,7 @@ Transactions.prototype.getQueuedTransactionList = function(reverse, limit) {
  * @param {boolean} ready - Limits results to transactions deemed "ready"
  * @returns {function} Calls transactionPool.getQueuedTransactionList
  */
-Transactions.prototype.getMultisignatureTransactionList = function(
+Transactions.prototype.getMultisignatureTransactionList = function (
 	reverse,
 	limit,
 	ready
@@ -535,7 +535,7 @@ Transactions.prototype.getMultisignatureTransactionList = function(
  * @returns {function} Calls transactionPool.getMergedTransactionList
  * @todo Add description for the params
  */
-Transactions.prototype.getMergedTransactionList = function(reverse, limit) {
+Transactions.prototype.getMergedTransactionList = function (reverse, limit) {
 	return __private.transactionPool.getMergedTransactionList(reverse, limit);
 };
 
@@ -546,7 +546,7 @@ Transactions.prototype.getMergedTransactionList = function(reverse, limit) {
  * @returns {function} Calls transactionPool.removeUnconfirmedTransaction
  * @todo Add description for the params
  */
-Transactions.prototype.removeUnconfirmedTransaction = function(id) {
+Transactions.prototype.removeUnconfirmedTransaction = function (id) {
 	return __private.transactionPool.removeUnconfirmedTransaction(id);
 };
 
@@ -559,7 +559,7 @@ Transactions.prototype.removeUnconfirmedTransaction = function(id) {
  * @returns {function} Calls transactionPool.processUnconfirmedTransaction
  * @todo Add description for the params
  */
-Transactions.prototype.processUnconfirmedTransaction = function(
+Transactions.prototype.processUnconfirmedTransaction = function (
 	transaction,
 	broadcast,
 	cb
@@ -577,7 +577,7 @@ Transactions.prototype.processUnconfirmedTransaction = function(
  * @param {function} cb - Callback function
  * @returns {function} Calls transactionPool.undoUnconfirmedList
  */
-Transactions.prototype.undoUnconfirmedList = function(cb, tx) {
+Transactions.prototype.undoUnconfirmedList = function (cb, tx) {
 	return __private.transactionPool.undoUnconfirmedList(cb, tx);
 };
 
@@ -590,7 +590,7 @@ Transactions.prototype.undoUnconfirmedList = function(cb, tx) {
  * @param {function} cb - Callback function
  * @todo Add description for the params
  */
-Transactions.prototype.apply = function(transaction, block, sender, cb, tx) {
+Transactions.prototype.apply = function (transaction, block, sender, cb, tx) {
 	library.logger.debug('Applying confirmed transaction', transaction.id);
 	library.logic.transaction.apply(transaction, block, sender, cb, tx);
 };
@@ -604,7 +604,7 @@ Transactions.prototype.apply = function(transaction, block, sender, cb, tx) {
  * @param {function} cb - Callback function
  * @todo Add description for the params
  */
-Transactions.prototype.undo = function(transaction, block, sender, cb, tx) {
+Transactions.prototype.undo = function (transaction, block, sender, cb, tx) {
 	library.logger.debug('Undoing confirmed transaction', transaction.id);
 	library.logic.transaction.undo(transaction, block, sender, cb, tx);
 };
@@ -618,7 +618,7 @@ Transactions.prototype.undo = function(transaction, block, sender, cb, tx) {
  * @returns {setImmediateCallback} cb
  * @todo Add description for the params and the return value
  */
-Transactions.prototype.applyUnconfirmed = function(
+Transactions.prototype.applyUnconfirmed = function (
 	transaction,
 	sender,
 	cb,
@@ -663,7 +663,7 @@ Transactions.prototype.applyUnconfirmed = function(
  * @returns {setImmediateCallback} cb
  * @todo Add description for the params and the return value
  */
-Transactions.prototype.undoUnconfirmed = function(transaction, cb, tx) {
+Transactions.prototype.undoUnconfirmed = function (transaction, cb, tx) {
 	library.logger.debug('Undoing unconfirmed transaction', transaction.id);
 
 	modules.accounts.getAccount(
@@ -687,7 +687,7 @@ Transactions.prototype.undoUnconfirmed = function(transaction, cb, tx) {
  * @returns {function} Calls transactionPool.receiveTransactions
  * @todo Add description for the params
  */
-Transactions.prototype.receiveTransactions = function(
+Transactions.prototype.receiveTransactions = function (
 	transactions,
 	broadcast,
 	cb
@@ -706,7 +706,7 @@ Transactions.prototype.receiveTransactions = function(
  * @returns {function} Calls transactionPool.fillPool
  * @todo Add description for the params
  */
-Transactions.prototype.fillPool = function(cb) {
+Transactions.prototype.fillPool = function (cb) {
 	return __private.transactionPool.fillPool(cb);
 };
 
@@ -715,7 +715,7 @@ Transactions.prototype.fillPool = function(cb) {
  *
  * @returns {boolean} True if `modules` is loaded
  */
-Transactions.prototype.isLoaded = function() {
+Transactions.prototype.isLoaded = function () {
 	return !!modules;
 };
 
@@ -725,7 +725,7 @@ Transactions.prototype.isLoaded = function() {
  *
  * @param {scope} scope - Loaded modules
  */
-Transactions.prototype.onBind = function(scope) {
+Transactions.prototype.onBind = function (scope) {
 	modules = {
 		accounts: scope.accounts,
 		transport: scope.transport,
@@ -747,7 +747,7 @@ Transactions.prototype.onBind = function(scope) {
  * @param {function} cb - Callback function
  * @returns {setImmediateCallback} cb, error, response
  */
-__private.processPostResult = function(err, res, cb) {
+__private.processPostResult = function (err, res, cb) {
 	let error = null;
 	let response = null;
 

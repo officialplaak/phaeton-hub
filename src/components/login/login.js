@@ -109,7 +109,7 @@ class Login extends React.Component {
     const network = {
       name: 'Custom Node',
       custom: true,
-      address: 'http://149.28.172.230:8000',
+      address: 'http://localhost:8000',
       code: 2,
     };
     this.secondIteration = true;

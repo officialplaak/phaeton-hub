@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from '../../assets/images/phaeton/logo.png';
 import exchangeIcon from '../../assets/images/phaeton/exchange-icon.png';
-import cardIcon from '../../assets/images/phaeton/hardware-wallet-icon.png';
-import coreIcon from '../../assets/images/phaeton/core-icon.png';
+// import cardIcon from '../../assets/images/phaeton/hardware-wallet-icon.png';
+// import coreIcon from '../../assets/images/phaeton/core-icon.png';
 import explorerIcon from '../../assets/images/phaeton/explorer-icon.png';
 import discordIcon from '../../assets/images/phaeton/discord-icon.png';
 import styles from './mainHeader.css';
@@ -43,34 +43,34 @@ class MainHeader extends React.Component {
                                 <a href="#section1">PRODUCTS</a>
                                 <ul>
                                   <li>
-                                    <a rel="noopener noreferrer" href="https://phaeton.com/exchange/" target="_blank">
+                                    <a rel="noopener noreferrer" href="https://plaak.io/" target="_blank">
                                       <img src={exchangeIcon} alt=""/>Exchange
                                     </a>
                                   </li>
-                                  <li>
+                                  {/* <li>
                                     <a rel="noopener noreferrer" href="https://phaeton.com/core/cards" target="_blank">
                                       <img src={cardIcon} alt=""/>Hardware Wallet
                                     </a>
-                                  </li>
-                                  <li>
+                                  </li> */}
+                                  {/* <li>
                                     <a rel="noopener noreferrer" href="https://phaeton.com/core/" target="_blank">
                                       <img src={coreIcon} alt=""/>Core
                                     </a>
-                                  </li>
+                                  </li> */}
                                   <li>
-                                    <a rel="noopener noreferrer" href="https://explorer.phaeton.com/" target="_blank">
+                                    <a rel="noopener noreferrer" href="https://explorer.plaak.com/" target="_blank">
                                       <img src={explorerIcon} alt=""/>Explorer
                                     </a>
                                   </li>
                                 </ul>
                               </li>
                               <li className={`${styles.scroll_link}`}>
-                                <a rel="noopener noreferrer" href="https://phaeton.phaeton.com/" target="_blank">PHAETON</a>
+                                <a rel="noopener noreferrer" href="https://core.plaak.com/" target="_blank">PHAETON</a>
                               </li>
-                              <li className={`${styles.scroll_link}`}>
+                              {/* <li className={`${styles.scroll_link}`}>
                                 <a rel="noopener noreferrer" href="https://phaeton.com/peers/" target="_blank">PEERS</a>
-                              </li>
-                              <li className={`${styles.scroll_link}`}><a rel="noopener noreferrer" target="_blank" href="https://phaeton.com/coming-soon.php">SUPPORT</a></li>
+                              </li> */}
+                              <li className={`${styles.scroll_link}`}><a rel="noopener noreferrer" target="_blank" href="https://plaak.com/plaak-support.html">SUPPORT</a></li>
                               <li className={`${styles.scroll_link}`}>
                                 <a rel="noopener noreferrer" target="_blank" className={'imgDiscordIcon'} href="https://discordapp.com/invite/F44Ybhj?url=https://phaeton.com/&amp;text=PHAETON">
                                   <img src={discordIcon} style={{ width: '100%' }}/>
